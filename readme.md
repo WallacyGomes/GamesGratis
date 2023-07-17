@@ -1,12 +1,10 @@
 Seja bem vindo ao meu projeto chamado "GamesGrátis"!
 
 Objetivo:
-
-Simplificar a busca por jogos (para PC) grátis na internet, consumindo a API pública: (https://www.freetogame.com/api-doc).
+- Simplificar a busca por jogos (para PC) grátis na internet, consumindo a API pública: (https://www.freetogame.com/api-doc).
 
 Tecnologias usadas:
-
-HTML5, CSS, JavaScript.
+- HTML5, CSS, JavaScript.
 
 
 Este é o meu primeiro projeto consumindo uma API, espero que goste :)
