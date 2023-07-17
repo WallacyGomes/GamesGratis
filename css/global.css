@@ -1,0 +1,38 @@
+body {
+    margin: 0 auto;
+    background-color: var(--background);
+}
+
+ul, h1, h2, h3, a, p, li, btn {
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    list-style: none;
+    color: var(--textcolor);
+}
+
+h1 {
+    font-family: var(--h1font);
+}
+
+h2, p, li, a {
+    font-family: var(--mainfont);
+}
+
+img{
+    display: block;
+}
+
+:root {
+    --maincolor: #1ADC29;
+    --background: #161616;
+    --textcolor: #fff;
+    --cardcolor: #1E1A1D;
+    --footercolor: #0D0D0D;
+    --mainfont: 'Roboto', sans-serif;
+    --h1font: 'Rubik', sans-serif;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}

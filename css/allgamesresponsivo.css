@@ -1,0 +1,31 @@
+@media (max-width: 1000px) {
+    .games{
+        grid-template-columns: repeat(2, 365px);
+        margin-bottom: 60px;
+    }
+}
+@media (max-width: 800px) {
+    .games{
+        grid-template-columns: 365px;
+        margin-bottom: 60px;
+    }
+    .game{
+        padding: 0px 0px 40px 0px;
+    }
+    .game h2{
+        font-size: 1.4rem;
+        padding: 0px 20px;
+    }   
+    .game p{
+        font-size: 1rem;
+        padding: 0px 30px;
+    }   
+    .game img{
+        width: 100%;
+    }
+    .info {
+        font-size: .8rem;
+        padding-left: 30px;
+        margin-bottom: 30px;
+    }
+}
