@@ -1,11 +1,13 @@
 import { url, options } from "./getapi.js";
+import textLimit from './textlimit.js';
 
 export default function initSearchTitle() {
   url;
   options;
 
   const searchTag = document.querySelector("#search");
-  searchTag.addEventListener("change", searchTitle);
+  const btnSearch = document.querySelector('.btn-search');
+  btnSearch.addEventListener("click", searchTitle);
 
   const gamesDiv = document.querySelector(".games");
 
@@ -40,6 +42,7 @@ export default function initSearchTitle() {
                 </ul>
                 <a href="${game.game_url}" target="_blank" class="btn-game">Ir para o site</a>`;
           gamesDiv.appendChild(gameDiv);
+          textLimit();
 
           searchTag.value = "";
           found = true;

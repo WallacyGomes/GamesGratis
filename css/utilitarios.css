@@ -34,11 +34,25 @@
     margin: 20px;
 }
 
+.game h2.limitado{
+    max-width: 36ch;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
 .game p{
     font-size: 1rem;
     margin-bottom: 40px;
+}
+
+.game p.limitado{
+    max-width: 36ch;
     overflow: hidden;
+    white-space: nowrap;
     text-overflow: ellipsis;
+    cursor: pointer;
 }
 
 .info {
@@ -59,8 +73,6 @@
     font-weight: bold;
     cursor: pointer;
 }
-
-
 
 footer{
     width: 100%;

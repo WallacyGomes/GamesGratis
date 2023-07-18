@@ -1,4 +1,5 @@
 import { url, options } from "./getapi.js";
+import textLimit from './textlimit.js';
 
 export default function initHomeGames() {
   url;
@@ -29,6 +30,7 @@ export default function initHomeGames() {
                                     </ul>
                                     <a href="${game.game_url}" target="_blank" class="btn-game">Ir para o site</a>`;
           gamesDiv.appendChild(gameDiv);
+          textLimit();
         }
       });
     } catch (error) {

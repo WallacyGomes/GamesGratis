@@ -1,8 +1,40 @@
-export default function initTextLimit(){
-    const p = document.querySelector('.game p')
-    const maxText = 20;
+export default function textLimit() {
+    const gameDescricao = document.querySelectorAll('.game p');
+    const gameTitulo = document.querySelectorAll('.game h2')
+    const maxText = 38;
+    const maxTextTitulo = 26;
+    
+    gameDescricao.forEach(texto => {
+        const textOriginal = texto.textContent;
+        const textLimited = texto.textContent.slice(0, maxText) + '(...)';
 
-    if(p.textContent.length > maxText){
-        p.textContent = p.textContent.slice(0, maxText) + '...';
-    }
+        if(texto.textContent.length > maxText){
+            texto.textContent = textLimited;
+            texto.classList.add('limitado');
+
+            texto.addEventListener('click', () => {
+                if(texto.textContent === textLimited) {
+                    texto.textContent = textOriginal;
+                    texto.classList.remove('limitado');
+                }
+            })
+        }
+    })
+
+    gameTitulo.forEach(texto => {
+        const textOriginal = texto.textContent;
+        const textLimited = texto.textContent.slice(0, maxTextTitulo) + '(...)';
+
+        if(texto.textContent.length > maxTextTitulo){
+            texto.textContent = textLimited;
+            texto.classList.add('limitado');
+
+            texto.addEventListener('click', () => {
+                if(texto.textContent === textLimited) {
+                    texto.textContent = textOriginal;
+                    texto.classList.remove('limitado');
+                }
+            })
+        }
+    })
 }
