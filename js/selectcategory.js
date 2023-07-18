@@ -18,6 +18,13 @@ export default function initSelectCategory() {
       const games = document.querySelectorAll(".game");
       games.forEach((jogo) => jogo.remove());
 
+
+      const notFoundMsg = document.querySelector('.notfound');
+      
+      if (notFoundMsg !== null) {
+        notFoundMsg.remove();
+      }
+
       result.forEach((game) => {
         const gameGenre = game.genre;
 
