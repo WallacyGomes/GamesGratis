@@ -13,6 +13,9 @@ export default function initHomeGames() {
       const response = await fetch(url, options);
       const result = await response.json();
 
+      const noScript = document.querySelector('noscript');
+      noScript.classList.add('jsativo');
+
       result.forEach((game) => {
         const gameId = game.id;
 

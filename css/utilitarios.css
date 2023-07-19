@@ -91,3 +91,31 @@ footer a:hover{
     color: #1dff30;
     transition: .5s ease-out;
 }
+
+noscript {
+    background-color: #ff0000; 
+    border-radius: 6px; 
+    padding: 10px; 
+    margin: 60px;
+    font-size: 1.2rem;
+    animation: enableJS 2s infinite;
+}
+
+noscript.jsativo {
+    display: none;
+}
+
+@keyframes enableJS {
+    0% {
+        background-color: #a00404; 
+        transform: translate3d(0, 0, 0,);
+    }
+    40% {
+        background-color: #b30505;
+        transform: translate3d(0, 8px, 8px);
+    }
+    90% {
+        background-color: #ff0000;
+        transform: translate3d(0, -4px, -4px);
+    }
+}
