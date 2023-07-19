@@ -1,7 +1,7 @@
 export default function textLimit() {
     const gameDescricao = document.querySelectorAll('.game p');
     const gameTitulo = document.querySelectorAll('.game h2')
-    const maxText = 38;
+    const maxText = 30;
     const maxTextTitulo = 26;
     
     gameDescricao.forEach(texto => {
