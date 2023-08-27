@@ -1,8 +1,7 @@
-import initHomeGames from './homegames.js';
-import initSearchTitle from './searchtitle.js';
-import initSelectCategory from './selectcategory.js';
-import initTextLimit from './textlimit.js';
-
+import initHomeGames from "./modules/homegames.js";
+import initSearchTitle from "./modules/searchtitle.js";
+import initSelectCategory from "./modules/selectcategory.js";
+import initTextLimit from "./modules/textlimit.js";
 
 initSearchTitle();
 initSelectCategory();

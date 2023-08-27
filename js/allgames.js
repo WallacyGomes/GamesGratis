@@ -1,5 +1,5 @@
-import { url, options } from "./getapi.js";
-import textLimit from './textlimit.js';
+import { url, options } from "./modules/getapi.js";
+import textLimit from "./modules/textlimit.js";
 
 let show = 12;
 let index = 0;
@@ -32,10 +32,10 @@ async function showGames() {
 
 showGames();
 
-const btnMostrar = document.querySelector("[data-mostrar]");
-btnMostrar.addEventListener("click", showMore);
-
 function showMore() {
   show += 12;
   showGames();
 }
+
+const btnMostrar = document.querySelector("[data-mostrar]");
+btnMostrar.addEventListener("click", showMore);
