@@ -1,14 +1,12 @@
 import { url, options } from "./getapi.js";
-import textLimit from './textlimit.js';
+import textLimit from "./textlimit.js";
 
 export default function initSearchTitle() {
   url;
   options;
 
   const searchTag = document.querySelector("#search");
-  const btnSearch = document.querySelector('.btn-search');
-  btnSearch.addEventListener("click", searchTitle);
-
+  const btnSearch = document.querySelector(".btn-search");
   const gamesDiv = document.querySelector(".games");
 
   async function searchTitle() {
@@ -28,7 +26,7 @@ export default function initSearchTitle() {
       notFoundMsg.forEach((msg) => msg.remove());
 
       result.forEach((game) => {
-        if (game.title.toLowerCase() == title) {
+        if (game.title.toLowerCase() === title) {
           const gameDiv = document.createElement("div");
           gameDiv.classList.add("game");
           gameDiv.innerHTML = `<img src="${game.thumbnail}" alt="imagem do jogo">
@@ -59,4 +57,5 @@ export default function initSearchTitle() {
       console.error(error);
     }
   }
+  btnSearch.addEventListener("click", searchTitle);
 }

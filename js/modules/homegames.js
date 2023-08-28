@@ -1,5 +1,5 @@
 import { url, options } from "./getapi.js";
-import textLimit from './textlimit.js';
+import textLimit from "./textlimit.js";
 
 export default function initHomeGames() {
   url;
@@ -9,12 +9,11 @@ export default function initHomeGames() {
 
   async function showHomeGames() {
     try {
-        
       const response = await fetch(url, options);
       const result = await response.json();
 
-      const noScript = document.querySelector('noscript');
-      noScript.classList.add('jsativo');
+      const noScript = document.querySelector("noscript");
+      noScript.classList.add("jsativo");
 
       result.forEach((game) => {
         const gameId = game.id;

@@ -1,5 +1,5 @@
 import { url, options } from "./getapi.js";
-import textLimit from './textlimit.js';
+import textLimit from "./textlimit.js";
 
 export default function initSelectCategory() {
   url;
@@ -7,7 +7,6 @@ export default function initSelectCategory() {
 
   const gamesDiv = document.querySelector(".games");
   const selectOpt = document.querySelector("#genre");
-  selectOpt.addEventListener("change", selectCategory);
 
   async function selectCategory(genre) {
     try {
@@ -19,9 +18,8 @@ export default function initSelectCategory() {
       const games = document.querySelectorAll(".game");
       games.forEach((jogo) => jogo.remove());
 
+      const notFoundMsg = document.querySelector(".notfound");
 
-      const notFoundMsg = document.querySelector('.notfound');
-      
       if (notFoundMsg !== null) {
         notFoundMsg.remove();
       }
@@ -47,9 +45,11 @@ export default function initSelectCategory() {
         } else {
           return false;
         }
+        return gameGenre;
       });
     } catch (error) {
       console.error(error);
     }
   }
+  selectOpt.addEventListener("change", selectCategory);
 }
