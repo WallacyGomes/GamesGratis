@@ -1,5 +1,5 @@
 import { url, options } from "./modules/getapi.js";
-import textLimit from "./modules/textlimit.js";
+import TextLimit from "./modules/textlimit.js";
 
 let show = 12;
 let index = 0;
@@ -26,7 +26,8 @@ async function showGames() {
                         </ul>
                         <a href="${game.game_url}" target="_blank" class="btn-game">Ir para o site</a>`;
     gamesDiv.appendChild(gameDiv);
-    textLimit();
+    const textLimit = new TextLimit(".game p", ".game h2");
+    textLimit.init();
   }
 }
 

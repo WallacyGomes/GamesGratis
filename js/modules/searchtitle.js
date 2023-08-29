@@ -1,5 +1,5 @@
 import { url, options } from "./getapi.js";
-import textLimit from "./textlimit.js";
+import TextLimit from "./textlimit.js";
 
 export default function initSearchTitle() {
   url;
@@ -40,7 +40,8 @@ export default function initSearchTitle() {
                 </ul>
                 <a href="${game.game_url}" target="_blank" class="btn-game">Ir para o site</a>`;
           gamesDiv.appendChild(gameDiv);
-          textLimit();
+          const textLimit = new TextLimit(".game p", ".game h2");
+          textLimit.init();
 
           searchTag.value = "";
           found = true;
