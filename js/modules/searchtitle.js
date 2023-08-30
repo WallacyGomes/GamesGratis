@@ -14,17 +14,22 @@ export default function initSearchTitle() {
       const response = await fetch(url, options);
       const result = await response.json();
 
+      // variável que controla se o jogo
+      // é encontrado ou não
       let found = false;
 
       const title = searchTag.value.toLowerCase();
 
-      // Removendo jogos
+      // Remove os jogos
       const games = document.querySelectorAll(".game");
       games.forEach((jogo) => jogo.remove());
 
+      // remove mensagem de "Jogo não encontrado"
       const notFoundMsg = document.querySelectorAll(".notfound");
       notFoundMsg.forEach((msg) => msg.remove());
 
+      // Itera sobre a API e mostra o jogo
+      // que o usuário digitou
       result.forEach((game) => {
         if (game.title.toLowerCase() === title) {
           const gameDiv = document.createElement("div");

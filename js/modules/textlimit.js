@@ -7,6 +7,8 @@ export default class textLimit {
     this.maxTextTitulo = 26;
   }
   
+  // limita a quantidade de caracteres
+  // da descrição do jogo
   limitDesc() {
       this.gameDescricao.forEach((texto) => {
       const textOriginal = texto.textContent;
@@ -25,6 +27,8 @@ export default class textLimit {
     });
   }
 
+  // limita a quantidade de caracteres
+  // do título do jogo
   limitTitle() {
     this.gameTitulo.forEach((texto) => {
         const textOriginal = texto.textContent;

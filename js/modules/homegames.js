@@ -12,12 +12,14 @@ export default function initHomeGames() {
       const response = await fetch(url, options);
       const result = await response.json();
 
+      // ativa a classe do noscript
       const noScript = document.querySelector("noscript");
       noScript.classList.add("jsativo");
 
       result.forEach((game) => {
         const gameId = game.id;
 
+        // seleciona os jogos com o id escolhido e mostra no site
         if (gameId === 540 || gameId === 466 || gameId === 286) {
           const gameDiv = document.createElement("div");
           gameDiv.classList.add("game");

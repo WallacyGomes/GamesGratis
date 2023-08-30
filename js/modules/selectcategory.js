@@ -14,16 +14,19 @@ export default function initSelectCategory() {
       const result = await response.json();
       const optSelected = genre.target.value;
 
-      // Removendo jogos
+      // Remove os jogos
       const games = document.querySelectorAll(".game");
       games.forEach((jogo) => jogo.remove());
 
+      // remove a mensagem de "jogo não encontrado"
+      // caso ela exista
       const notFoundMsg = document.querySelector(".notfound");
-
       if (notFoundMsg !== null) {
         notFoundMsg.remove();
       }
 
+      // mostra os jogos selecionados
+      // pela categoria
       result.forEach((game) => {
         const gameGenre = game.genre;
 

@@ -1,7 +1,9 @@
 import { url, options } from "./modules/getapi.js";
 import TextLimit from "./modules/textlimit.js";
 
+// controla a quantidade de jogos que irá aparecer na tela
 let show = 12;
+// controla o index
 let index = 0;
 
 async function showGames() {
@@ -10,6 +12,7 @@ async function showGames() {
 
   const gamesDiv = document.querySelector(".games");
 
+  // mostra os jogos no site conforme o index
   for (index; index < show; index++) {
     const game = result[index];
 
@@ -33,6 +36,7 @@ async function showGames() {
 
 showGames();
 
+// mostra os próximos jogos seguindo o index
 function showMore() {
   show += 12;
   showGames();
